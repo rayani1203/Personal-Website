@@ -1,0 +1,380 @@
+@keyframes transition {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* ---- reset ---- */ body{ margin:0; font:normal 75% Arial, Helvetica, sans-serif; background-color: #121212; animation: transition 1.8s;} canvas{ display: block; vertical-align: bottom; } 
+/* ---- particles.js container ---- */  #particles-js{ position:absolute; width: 100%; height: 100%; background-color: #121212; background-image: url(""); background-repeat: no-repeat; background-size: 20%; background-position: 50% 50%; z-index: 1;} 
+
+*{
+    margin: 0px;
+    padding: 0px;
+    z-index: 50;
+}
+
+section{
+    width: 100%;
+    height: 95vh;
+    box-shadow: 1px, 5px, 5px, 5px black;
+}
+
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    background-color: #1F1B24;
+    padding: 0px;
+    box-shadow: 0px 0px 6px #3e3d3d;
+}
+
+nav ul{
+    display: flex;
+}
+
+ul{
+    list-style: none;
+}
+
+nav ul li a{
+    margin: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color:lightgray;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+a{
+    text-decoration: none;
+}
+
+.title{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 35px;
+    color: white;
+    font-weight: 900;
+    padding-left: 190px;
+}
+
+.active{
+    font-weight: 900;
+    color:white;
+    transform: scale(1.2);
+}
+
+.intro p:nth-child(1){
+    padding-top: 40px;
+    font-weight: bold;
+    color: lightsteelblue;
+    font-size: 22px;
+}
+
+.intro p:nth-child(2){
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: white;
+    font-size: 60px;
+}
+
+.intro p:nth-child(3){
+    color: lightsteelblue;
+    font-size: 30px;
+}
+
+.intro p{
+    margin: 15px 0px 20px;
+}
+
+.intro{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: absolute;
+    left: 20%;
+    top: 30%;
+}
+
+.intro button{
+    position: relative;
+    width: 150px;
+    height: 42px;
+    border-radius: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    margin: 20px 10px;
+    outline: none;
+    border: 3px;
+    box-shadow: 1px 1px 5px darkgray;
+    border: 2px solid black;
+    background-color: whitesmoke;
+}
+
+.cv{
+    width: auto;
+}
+
+.intro button:active{
+    transform: scale(1.1);
+}
+
+.background{
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    top: 0%;
+    z-index: 3;
+}
+
+.next{
+    position: absolute;
+    z-index: 1000;
+    height: 85px;
+    right: 2%;
+    top: 48%;
+}
+
+.back{
+    position: absolute;
+    z-index: 1000;
+    height: 85px;
+    left: 2%;
+    top: 48%;
+    transform: rotate(180deg);
+}
+
+.about{
+    width: 80%;
+    height: 530px;
+    background-color:#1F1B24;
+    border-radius: 20px;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    z-index: 1000;
+    margin: 10px auto 20px auto;
+}
+
+.about-img{
+    height: 330px;
+    position: absolute;
+    margin-left: 70px;
+    margin-top: 70px;
+    border-radius: 20px;
+    border: 3px groove darkblue;
+}
+
+.about-text{
+    width: 550px;
+    margin-left: 450px;
+    line-height: 25px;
+}
+
+.about-text h1, p{
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    width: 650px;
+}
+
+.about-text h1{
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+    font-size: 31px;
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+
+.about-text p{
+    color: lightgray;
+    font-size: 15px;
+    font-weight:550;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.carousel{
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    width: 80%;
+    background-color: #1F1B24;
+    border-radius: 20px;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+}
+
+.small-carousel{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-left: 12%;
+}
+
+.accordion img{
+    height: 110px;
+    width: 110px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid darkblue;
+    background-color: gainsboro;
+    padding: 10px;
+}
+
+.accordion{
+    background-color: #202020;
+    border-radius: 25px;
+    padding: 25px 35px;
+    width: 370px;
+    height: 265px;
+    transition: background 0.9s;
+}
+
+.accordion::after{
+    content: '\25be';
+    color: white;
+    float: right;
+    transform: scale(1.5);
+    padding-bottom: 75px;
+}
+
+.description p{
+    width: inherit;
+    text-align: center;
+    color: white;
+    font-weight: 400;
+    line-height: 22px;
+    font-size: 15px;
+    margin-bottom: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.description{
+    width: 340px;
+    overflow: scroll;
+    max-height: 0;
+    transition: max-height 0.4s;
+    background-color: #363636;
+    border-radius: 20px;
+    font-family: sans-serif;
+    margin-bottom: 50px;
+    padding: 0px 15px;
+}
+
+.git-link{
+    color: skyblue;
+}
+
+.accordion h1{
+    padding-top: 20px;
+}
+
+.accordion-title{
+    padding-bottom: 0px;
+}
+
+.accordion-active{
+    background-color: #363636;
+}
+
+.accordion h1{
+    color: white;
+}
+
+.accordion-active::after {
+    content: '\25b4';
+    color: white;
+}
+
+.project-header{
+    width: 90%;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+    font-size: 23px;
+    padding: 20px 20px 20px 20px;
+    margin: 20px 20px 20px;
+    text-align: center;
+}
+
+.contact{
+    background-color: #1F1B24;  
+    position: relative; 
+    display: flex;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 70px;
+    border-radius: 15px;
+    box-shadow: 1px, 5px, 5px, 5px darkgray;
+    width: 80%;
+    left: 10%;
+    padding: 35px;
+}
+
+.contact img{
+    width: 30px;
+    height: 30px;
+    background-color: azure;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.contact-content h1{
+    font-size: 40px;
+}
+
+.contact-content p{
+    font-weight: 400;
+    font-size:medium;
+}
+
+.contact-container{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.contact-info{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-box{
+    position:relative;
+    padding: 20px 0;
+    display: flex;
+}
+
+.form{
+    position: absolute;
+    width: 45%;
+    padding: 40px;
+    top: 26%;
+    left: 50%;
+}
+
+.input{
+    padding: 4px;
+}
+
+.form h1{
+    font-size: 30px;
+    padding-bottom: 12px;
+}
+
+.form span{
+    font-weight: bold;
+}
