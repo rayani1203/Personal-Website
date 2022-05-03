@@ -172,6 +172,7 @@ a{
     width: 550px;
     margin-left: 450px;
     line-height: 25px;
+    overflow: scroll;
 }
 
 .about-text h1, p{
@@ -338,6 +339,10 @@ a{
     font-size:medium;
 }
 
+.contact-content{
+    padding-left: 50px;
+}
+
 .contact-container{
     margin-top: 50px;
     display: flex;
@@ -360,10 +365,13 @@ a{
 
 .form{
     position: absolute;
-    width: 45%;
+    width: 26%;
     padding: 40px;
-    top: 26%;
-    left: 50%;
+    top: 30%;
+    left: 48%;
+    color: #121212;
+    background-color: white;
+    height: 50%;
 }
 
 .input{
@@ -375,6 +383,44 @@ a{
     padding-bottom: 12px;
 }
 
-.form span{
-    font-weight: bold;
+.form .input{
+    position: relative;
+    width: 100%;
+}
+
+.form .input input, textarea{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    margin-top: 7px;
+}
+
+textarea{
+    max-height: 100px;
+    max-width: 100%;
+}
+
+.form .input span{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 5px 0;
+    margin-left: 5px;
+    margin-top: 7px;
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+
+.form .input input:focus ~ span,
+.form .input input:valid ~ span,
+.form .input textarea:focus ~ span,
+.form .input textarea:valid ~ span{
+    color: blue;
+    font-size: 12px;
+    transform: translateY(-19px);
 }
