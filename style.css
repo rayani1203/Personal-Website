@@ -424,3 +424,13 @@ textarea{
     font-size: 12px;
     transform: translateY(-19px);
 }
+
+.form .input input[type="submit"]{
+    width: 100px;
+    background: blue;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
