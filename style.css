@@ -238,6 +238,7 @@ a{
     width: 370px;
     height: 265px;
     transition: background 0.9s;
+    cursor: pointer;
 }
 
 .accordion::after{
@@ -262,8 +263,8 @@ a{
 .description{
     width: 340px;
     overflow: scroll;
-    max-height: 0;
     transition: max-height 0.4s;
+    max-height: 0;
     background-color: #363636;
     border-radius: 20px;
     font-family: sans-serif;
